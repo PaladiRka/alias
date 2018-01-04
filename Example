@@ -1,0 +1,28 @@
+class Vector {
+Object[] data;
+int cntr;
+Vector() {Object[] t = new Object[100];
+      this.data = t; }
+void add(Object e) {
+    Object[] t = this.data;
+      t[cntr++] = e;
+      }
+ Object get(int idx) {
+     Object[] t = this.data;
+     Object p = t[idx]; return p;
+      }
+ }
+ class Element { Object f; }
+ public class Main { public static void main(String[] args) {
+        Vector v = new Vector();
+        Element a = new Element();
+        Object t = "hello"; a.f = t; v.add(a);
+        Vector w = new Vector();
+        Element b = new Element();
+        w.add(b);
+        Element c = (Element)w.get(0);
+        t = "world"; c.f = t;
+        Element d = (Element)v.get(0);
+        Object m = d.f;
+        System.out.println(m);
+        }}
